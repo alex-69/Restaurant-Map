@@ -1,0 +1,22 @@
+.Restaurant-bloc{
+    margin-top: 25%;
+    width: 50%;
+    padding-top: 10%;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+  
+}
+
+.Restaurant-name{
+    font-family: 'Google Sans',Roboto, Arial,sans-serif;
+    font-size: 1.375rem;
+    font-weight: 400;
+}
+.Restaurant-ratings{
+    font-family: 'Google Sans',Roboto, Arial,sans-serif;
+    font-size: 0.8rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  
+}
+
