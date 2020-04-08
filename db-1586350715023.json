@@ -1,0 +1,38 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "restaurantName": "Bronco",
+      "address": "39 Rue des Petites Écuries, 75010 Paris",
+      "lat": 48.8737815,
+      "long": 2.3501649,
+      "ratings": [
+        {
+          "stars": 3,
+          "review": "Un excellent restaurant, j'y reviendrai ! Par contre il vaut mieux aimer la viande."
+        },
+        {
+          "stars": 2,
+          "review": "Tout simplement mon restaurant préféré !"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "restaurantName": "Babalou",
+      "address": "4 Rue Lamarck, 75018 Paris",
+      "lat": 48.8865035,
+      "long": 2.3442197,
+      "ratings": [
+        {
+          "stars": 5,
+          "review": "Une minuscule pizzeria délicieuse cachée juste à côté du Sacré choeur !"
+        },
+        {
+          "stars": 4,
+          "review": "J'ai trouvé ça correct, sans plus"
+        }
+      ]
+    }
+  ]
+}

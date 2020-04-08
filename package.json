@@ -1,22 +1,31 @@
 {
-  "name": "projet-7-oc",
+  "name": "restaurant-map",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@boxgames/react-street-view": "^1.1.4",
+    "antd": "^3.24.3",
     "axios": "^0.19.0",
+    "google-map-react": "^1.1.5",
     "google-maps-react": "^2.0.2",
-    "react": "^16.8.6",
+    "peer": "^0.2.10",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-helmet": "^5.2.1",
+    "react-redux": "^7.1.1",
+    "react-scripts": "3.0.1",
+    "react-streetview": "^1.1.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.4.0",
+    "typescript": "^3.6.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

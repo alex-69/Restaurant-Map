@@ -1,10 +1,8 @@
 .Restaurant-bloc{
-    margin-top: 25%;
     width: 50%;
-    padding-top: 10%;
     border-top: 1px solid black;
     border-right: 1px solid black;
-  
+    overflow-y: scroll;
 }
 
 .Restaurant-name{
@@ -19,4 +17,3 @@
     border-bottom: 1px solid black;
   
 }
-

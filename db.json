@@ -8,12 +8,12 @@
      "long":2.3501649,
      "ratings":[
         {
-           "stars":4,
-           "comment":"Un excellent restaurant, j'y reviendrai ! Par contre il vaut mieux aimer la viande."
+           "stars":3,
+           "review":"Un excellent restaurant, j'y reviendrai ! Par contre il vaut mieux aimer la viande."
         },
         {
-           "stars":5,
-           "comment":"Tout simplement mon restaurant préféré !"
+           "stars":2,
+           "review":"Tout simplement mon restaurant préféré !"
         }
      ]
   },
@@ -26,11 +26,11 @@
      "ratings":[
         {
            "stars":5,
-           "comment":"Une minuscule pizzeria délicieuse cachée juste à côté du Sacré choeur !"
+           "review":"Une minuscule pizzeria délicieuse cachée juste à côté du Sacré choeur !"
         },
         {
-           "stars":3,
-           "comment":"J'ai trouvé ça correct, sans plus"
+           "stars":4,
+           "review":"J'ai trouvé ça correct, sans plus"
         }
      ]
   }

@@ -1,7 +1,7 @@
 .Layout {
     display: flex;
-    text-align: center;
-    align-items: center;
-    margin-top: -36%;
+    text-align: center; 
+    height: 100vh;
+    overflow: hidden;
   }
   
