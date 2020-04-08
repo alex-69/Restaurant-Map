@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-//import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 import GoogleMapReact from 'google-map-react';
 import './Map.css'
 import Modal from '../../components/UI/Modal/Modal'
@@ -12,9 +11,9 @@ import { Button, Input, Divider, message } from 'antd';
 
 const PARIS_COOR = { lat: 48.856782, lng: 2.352551 };
 class Maps extends Component {
-    
-  state = { 
-    userLocation: { lat: 32, lng: 32 }, 
+
+  state = {
+    userLocation: { lat: 32, lng: 32 },
     loading: true,
     locations: [],
     newRestaurant:'',
@@ -52,7 +51,7 @@ class Maps extends Component {
 
     //when you click on the map, a pop-up displays for adding a new restaurant
     handleMapClick = (lat) => {
-      this.setState({newRestaurant:lat}) 
+      this.setState({newRestaurant:lat})
       this.setState({showModal:true})
     }
 
@@ -60,7 +59,7 @@ class Maps extends Component {
     cancelAddResaurant = () =>{
       this.setState({showModal:false})
     }
-    
+
     //add a new for the new restaurant added
     namChangehandler= (event) =>{
       this.setState({restaurantName: event.target.value})
@@ -76,9 +75,9 @@ class Maps extends Component {
       this.setState({showModal:false})
     }
 
-    
+
   // Updates distance (in KM) for constraint with index == key
-  updateConstraintTime = ((value) => { 
+  updateConstraintTime = ((value) => {
     this.setState({ constraints:{time:value} });
   });
 
@@ -101,7 +100,7 @@ class Maps extends Component {
       directionService: new mapsApi.DirectionsService(),
       });
     });
-  
+
  // With the constraints, find some restaurants
  handleSearch = (() => {
   const { markers,constraints, placesService, directionService, mapsApi } = this.state;
@@ -112,7 +111,7 @@ class Maps extends Component {
   const marker = markers;
   //const position = newPosition[0];
   const timeLimit = constraints.time;
-  
+
   const markerLatLng = new mapsApi.LatLng(marker.lat, marker.lng);
   const placesRequest = {
     location: markerLatLng,
@@ -121,10 +120,10 @@ class Maps extends Component {
     query: 'restaurant',
     rankBy: mapsApi.places.RankBy.DISTANCE, // Cannot be used with radius.
   };
-  
+
   // First, search for restaurant.
   placesService.textSearch(placesRequest, ((response) => {
-    
+
    // Only look at the nearest top 5.
    const responseLimit = Math.min(50, response.length);
    for (let i = 0; i < responseLimit; i++) {
@@ -160,12 +159,12 @@ class Maps extends Component {
           this.props.restaurantAdded(idRestaurant, name, address, locationLat, locationLng, rating)
         }
         ;
-        
+
       }));
     }
   }));
 });
- 
+
     render(){
         const { loading} = this.state;
         if (loading) {
@@ -182,7 +181,7 @@ class Maps extends Component {
             </Modal>
 
             const AnyReactComponent = ({ text }) => <div>{text}<img src={logoResaurant} width="20" height="20"/></div>;
-            
+
             const positionRestaurant = this.props.position.map((data,index) => {
               return <AnyReactComponent
               key={index}
@@ -194,7 +193,7 @@ class Maps extends Component {
 
             const {mapsLoaded, parisLatLng, markers, constraints} = this.state;
             const { autoCompleteService, geoCoderService } = this.state; // Google Maps Services
-            
+
           return(
              <div className='Map-bloc'>
               <div style={{ height: '100vh', width: '100%' }}>
@@ -223,7 +222,7 @@ class Maps extends Component {
                     <Button className="mt-4 fw-md" type="primary" size="large" onClick={this.handleSearch}>Search!</Button>
                 </section>
                 <GoogleMapReact
-                  bootstrapURLKeys={{ 
+                  bootstrapURLKeys={{
                   key:'AIzaSyD9VQ7cIPYL7S5w_hoBA-oveN6L91SfTPo',
                   libraries: ['places', 'directions']
                   }}
@@ -233,16 +232,15 @@ class Maps extends Component {
                   yesIWantToUseGoogleMapApiInternals={true}
                   onGoogleApiLoaded={({ map, maps }) => this.apiHasLoaded(map, maps)} // "maps" is the mapApi. Bad naming but that's their library.
                   onClick={this.handleMapClick}
-                  > 
+                  >
                   {positionRestaurant}
                 <MapMarker name={markers.name} lat={markers.lat} lng={markers.lng} />
                </GoogleMapReact>
-              {modal}   
+              {modal}
             </div>
-          </div>      
+          </div>
           )
         }
       }
-      
-export default Maps
 
+export default Maps
